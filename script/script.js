@@ -16,6 +16,7 @@ links.forEach(link => {
 
     })
 })
+
 let lastScrollTop = 0;
 window.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -249,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('preferredLanguage', lang);
     }
 
-    changeLanguage("hy")
+
     document.querySelector('img[alt="armenia"]').addEventListener('click', function () {
         changeLanguage('hy');
     });
