@@ -333,7 +333,7 @@ section {
 }
 
 .service-card img {
-    width: 100%;
+  width: auto;
     height: 180px;
     object-fit: contain;
     margin-bottom: 20px;
@@ -383,7 +383,7 @@ section {
 }
 
 .portfolio-card img {
-    width: 100%;
+    width:auto;
     height: 180px;
     object-fit: contain;
     margin-bottom: 20px;
@@ -670,11 +670,7 @@ footer p {
         flex-direction: column;
     }
 
-    .service-card,
-    .portfolio-card {
-        width: 90%;
-        height: auto;
-    }
+
 
     .about-text {
         max-width: 100%;
@@ -714,6 +710,21 @@ footer p {
 
     .step-content {
         padding: 0;
+    }
+}
+@media (max-width: 420px) {
+    .portfolio-card,
+    .service-card {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .service-card img,
+    .portfolio-card img {
+        max-width: 100%;
+        margin: 0 auto;
+        height: auto;
+        display: block;
     }
 }
 
