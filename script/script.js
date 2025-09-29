@@ -369,9 +369,9 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
 
-    if (homeTitle) homeTitle.style.transitionDelay = '0.2s';
-    if (homeParagraph) homeParagraph.style.transitionDelay = '0.4s';
-    if (homeButton) homeButton.style.transitionDelay = '0.6s';
+    if (homeTitle) homeTitle.style.transitionDelay = '0.1s';
+    if (homeParagraph) homeParagraph.style.transitionDelay = '0.1s';
+    if (homeButton) homeButton.style.transitionDelay = '0.1s';
 
     sectionTitles.forEach((title, index) => {
         title.style.transitionDelay = `${index * 0.1 + 0.2}s`;
