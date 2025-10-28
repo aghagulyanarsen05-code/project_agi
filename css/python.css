@@ -1,0 +1,390 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    padding-top: 160px;
+     
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    background: rgba(17, 24, 39, 0.95);
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    transition: transform 0.3s ease-in-out;
+    border-bottom: 2px solid #d1d5db;
+}
+
+.top-bar.hidden {
+    transform: translateY(-100%);
+}
+
+.top-bar a, i, p, img {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.icon_lng {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* կամ flex-start */
+    gap: 12px; /* բոլորի միջև հավասար տարածություն */
+}
+
+.icon_lng img {
+    width: 20px;
+    height: 20px;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background: rgba(17, 24, 39, 0.95);
+    transition: top 0.3s ease-in-out;
+    top: 40px;
+}
+
+header.scrolled {
+    top: 0;
+}
+
+.logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.menu_burger {
+    display: none;
+    color: #ffff;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+    position: relative;
+    color: #ffff;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #2873ab;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+@media (max-width: 780px) {
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        padding-top: 0px;
+    }
+
+    .top-bar {
+        padding: 10px 20px;
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+    .icon_lng{
+        gap: 0;
+    }
+
+    .phone_topbar {
+        margin-bottom: 10px;
+    }
+
+    header {
+        padding: 10px 20px;
+        top: 0;
+        height: 70px;
+        position: relative;
+    }
+
+    /*  Burger menu positioning */
+    .menu_burger {
+        display: block !important;
+        cursor: pointer;
+        color: #ffff;
+        z-index: 1000;
+        background: rgba(17, 24, 39, 0.95);
+        padding: 10px 15px;
+        border-radius: 5px;
+        border: 2px solid #0077C8;
+    }
+
+    /*  Navigation menu */
+    .nav-links {
+        position: fixed;
+        top: 135px;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(17, 24, 39, 0.98);
+        flex-direction: column;
+        justify-content: flex-start;
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
+        z-index: 999;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+    }
+
+    .nav-links a {
+        color: #ffff;
+        font-size: 20px;
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+ 
+    .contact-content {
+        flex-direction: column;
+    }
+
+
+
+ 
+    .about-text img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .contact-content > * {
+        flex: 1 1 100%;
+    }
+
+    section {
+        padding: 60px 10px;
+    }
+
+    .home-section h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .home-section p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .step {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .circle {
+        margin-bottom: 15px;
+    }
+
+    .step-content {
+        padding: 0;
+    }
+}
+
+
+@media (max-width: 360px) {
+    .menu_burger {
+        right: 10px;
+        top: 10px;
+        font-size: 24px;
+        padding: 8px 12px;
+    }
+}
+.content {
+    padding: 40px;
+    height: 2000px;
+    color: #333;
+}
+
+/* Section-ի մուտքի անիմացիա */
+.course-section {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(164, 30, 30, 0.08);
+}
+
+/* Անիմացիայի բանալի կադրեր */
+@keyframes fadeSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.course-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+.course-section p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    color: #555;
+}
+
+/* 🔹 UX բարելավված cards layout՝ 3 սյուն, հավասար բարձրությամբ */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+    gap: 25px;
+    margin-top: 40px;
+    align-items: stretch; /* քարտերը հավասար բարձրությամբ */
+
+
+}
+
+/* 🔹 Քարտեր՝ հավասար բարձրությամբ և hover transition */
+.card {
+    background-color: #f0f4ff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    top: 60px;
+ 
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+     box-shadow: 0 4px 20px #1e3a8a;
+}
+
+.card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #1e40af;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    flex-grow: 1; /* ստիպում է ցանկը զբաղեցնել միջին մասը */
+}
+
+.card ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.card ul li::before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Վերջին պարբերությունը՝ ավելի շեշտված */
+.course-section p:last-of-type {
+    margin-top: 40px;
+    font-weight: 500;
+    color: #1e3a8a;
+    text-align: center;
+}
+
+
+
+
+footer {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 15px 0;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 5px;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr !important; /* մեկ սյուն */
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+
+  .card ul li {
+    font-size: 1rem;
+  }
+}
