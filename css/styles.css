@@ -3,11 +3,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    transition: all 0.0s ease !important;
+    
 }
 
 body {
-    color: #111827;
+ 
+    min-height: 100vh;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -78,6 +83,7 @@ section.visible {
 .step {
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    
 }
 
 .step.left {
@@ -593,6 +599,7 @@ footer p {
     font-size: 12px;
 }
 
+
 @media (max-width: 780px) {
     body {
         overflow-x: hidden;
@@ -705,6 +712,7 @@ footer p {
     .step {
         flex-direction: column !important;
         text-align: center;
+        
     }
 
     .circle {
