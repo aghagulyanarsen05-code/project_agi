@@ -42,10 +42,10 @@ html {
 }
 
 .btn {
-    opacity: 0;
-    transform: translateY(40px) scale(0.8);
-    transition: opacity 0.6s ease 0.6s, transform 0.6s ease 0.6s, background 0.3s ease;
+    /* background: #004a94 !important; */
+    color: white !important;
 }
+
 
 .home-section .btn.visible {
     opacity: 1;
@@ -53,6 +53,7 @@ html {
 }
 
 section h2 {
+    margin-top: 120px;
     opacity: 0;
     transform: translateY(-30px);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -288,7 +289,7 @@ section {
 .btn {
     display: inline-block;
     padding: 12px 28px;
-    background: #0077C8;
+    /* background: #004a94; */
     color: white;
     font-weight: bold;
     border-radius: 8px;
@@ -297,9 +298,7 @@ section {
     border: none;
 }
 
-.btn:hover {
-    background: #1d4ed8;
-}
+
 
 .services-section {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
