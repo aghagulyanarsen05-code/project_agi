@@ -1,6 +1,6 @@
 export default {
     // Top Bar
-    "phone": "+374 44 466009",
+    "phone": "+374 96  77 96 69",
 
     // Navigation
     "home": "Home",
