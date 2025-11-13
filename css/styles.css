@@ -198,8 +198,8 @@ header.scrolled {
 }
 
 .logo img {
-    width: 120px;
-    height: 120px;
+    width: 90px;
+    height: 90px;
     object-fit: contain;
 }
 
@@ -1018,4 +1018,63 @@ footer p {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- COURSE SECTION ---- */
+.das {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: row; /* հիմնականում կողք կողքի */
+}
+
+.course-card {
+  width: 300px;
+  max-width: 100%;
+  /* background: #fff; */
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* ✅ Փոքր էկրանների (մինչև 768px) համար՝ իրար տակ */
+@media (max-width: 768px) {
+  .das {
+    flex-direction: column; /* մի սյունակ */
+    align-items: center;
+  }
+
+  .course-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* ✅ Շատ փոքր էկրանների (մինչև 480px) համար */
+@media (max-width: 480px) {
+  .course-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .icon-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-container i {
+    font-size: 40px;
+  }
+
+  .python {
+    font-size: 18px;
+  }
 }
