@@ -1,6 +1,33 @@
 export default {
     // Top Bar
-    "phone": "+374 96  77 96 69",
+    "phone": "+374 96  779669",
+    "cragrayin": "Software Development",
+    "cragir":"Custom Development — Creation of complex, high-load corporate systems with end-to-end solutions.  Web Development — Development of advanced web applications (PWA), complex e-commerce sites, and portals. Mobile Development — Creation of native (iOS/Android) and cross-platform mobile applications. Desktop Application Development — For all major operating systems (Windows, macOS, Linux).",
+    "smm":"Social Media Marketing (SMM)",
+    "smmm":"We manage your brand’s online presence by creating effective strategies.",
+    "crm":"CRM Implementation",
+    "crmm":"Business process automation — to increase productivity.Integration of various systems — connecting internal systems with each other and with external services.",
+    "biznes":"Business Process Automation",
+    "bizness":"Business AI Transformation — Developing a strategy for integrating artificial intelligence into business processes.  Technical Audit and IT Infrastructure Assessment — Analyzing existing systems to determine readiness for AI solution implementation.Data Audit — Evaluating data quality and structure for suitability in machine learning (ML) models.Cybersecurity Consulting — Focused on protecting against AI-driven threats and ensuring safe AI adoption.",
+    "ai":"AI Integration",
+    "aii":"Computer Vision — Systems for recognizing and analyzing images and videos, applied in medical diagnostics, security, autonomous driving, and production quality control. Natural Language Processing (NLP). Next-generation chatbots and virtual assistants. Sentiment analysis and semantic search  Automatic text summarization and translation. Text generation for reports, articles, and marketing materials. Predictive Analytics — Creating models to forecast demand, financial risks, and customer churn.  Generative AI — Development and deployment of models to generate images, videos, music, 3D objects, and code based on textual descriptions.Personalization and Recommender Systems — Creating intelligent systems for e-commerce, streaming platforms, and media services.",
+    "bot":"Chatbot Development",
+    "bott":"We create intelligent chatbots that respond to customers 24/7.",
+    "data":"Data Science and Analytics",
+    "dataa":"Data collection, cleaning, and structuring (Data Engineering). Creation of data warehouses and data lakes. Business intelligence (BI) and dashboard development. A/B testing and statistical analysis",
+    "amp":"Cloud Services and DevOps",
+    "ampp":"Deployment and management of cloud infrastructure. CI/CD process setup. Cloud environment migration and cost optimization. MLOps — automation of the ML models’ lifecycle",
+    "kiber":"Cybersecurity",
+    "kiberr":"AI-powered threat detection systems. Security audit of applications and networks  Encryption of infrastructure and communication systems",
+    "bloq":"Blockchain and Web3",
+    "bloqq":"Development of smart contracts and dApps. Creation of custom blockchain solutions.Blockchain network analysis and security",
+    "game":"Game and Metaverse Technology Development",
+    "games":"Creation of game engines using AI for content generation. Development of interactive simulators and virtual worlds for education and entertainment Creation of tools and solutions for the Metaverse",
+    "operator":"Computer Operator",
+    "jartar":"AI Engineering",
+
+
+
 
     // Navigation
     "home": "Home",

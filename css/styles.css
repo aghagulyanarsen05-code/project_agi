@@ -778,6 +778,7 @@ footer p {
     background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     padding: 80px 20px;
     text-align: center;
+    font-size: 8px;
     max-width: 100%;
     box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
     color: #fff;
@@ -792,12 +793,45 @@ footer p {
 
 #course a.python {
     display: inline-block;
+    position: relative;
     padding: 16px 52px;
     font-size: 20px;
     font-weight: 600;
     color: #1a1a1a;
     margin-left:10px;
-    margin-top:  -60px;
+    margin-top:  17px;
+    text-decoration: none;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    border: 1px solid black;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+#course a.pythonn {
+    display: inline-block;
+    padding: 16px 52px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-left:10px;
+    margin-top:  -10px;
+    text-decoration: none;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+    border: 1px solid black;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+#course a.pythonnn{
+    display: inline-block;
+    padding: 16px 52px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-left:10px;
+    margin-top:  -15px;
     text-decoration: none;
     -webkit-border-radius: 200px;
     -moz-border-radius: 200px;
@@ -812,12 +846,19 @@ footer p {
     box-shadow: 0 6px 20px rgba(0,0,0,0.3);
 }
 
+#course a.pythonn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
 
-
+#course a.pythonnn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 .card_py {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.568);
   width: 300px;
   height: 300px;
   border-radius: 16px;
@@ -899,7 +940,7 @@ footer p {
 
 .icon-container i:hover {
   transform: scale(1.15);
-  color: #ffd43b; /* Python yellow */
+
 }
 .python{
     margin-top:0px;
@@ -908,4 +949,73 @@ footer p {
     display: flex;
     font-size: 20px;
     color: black;
+}
+
+.das{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.python h2{
+    font-size: 1px;
+}
+
+
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.service-card {
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-card h3 {
+  margin: 15px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+/* info-box initially hidden */
+.info-box {
+  display: none;
+  padding: 0 15px 15px;
+  color: #8a8a8a;
+  line-height: 1.6;
+  border-top: 1px solid #eee;
+  animation: fadeIn 0.3s ease;
+}
+
+/* when active class added */
+.service-card.active .info-box {
+  display: block;
+}
+
+/* Animation effect */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }

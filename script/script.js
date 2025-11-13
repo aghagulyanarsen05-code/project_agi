@@ -20,6 +20,27 @@ links.forEach(link => {
 
     })
 })
+// service-info.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.service-card');
+
+  cards.forEach(card => {
+    card.addEventListener('click', () => {
+      // եթե արդեն բացված է՝ փակում ենք
+      if (card.classList.contains('active')) {
+        card.classList.remove('active');
+        return;
+      }
+
+      // փակում ենք մնացածները
+      cards.forEach(c => c.classList.remove('active'));
+
+      // բացում ենք ընտրյալը
+      card.classList.add('active');
+    });
+  });
+});
 
 // hidden top bar
 let lastScrollTop = 0;
