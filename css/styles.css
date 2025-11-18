@@ -300,66 +300,6 @@ section {
 
 
 
-.services-section {
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    color: #f8fafc;
-    padding: 80px 20px;
-    text-align: center;
-}
-
-.services-section h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.services-container, .portfolio-container, .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    background-color: #1f2937;
-    padding: 80px 20px;
-    max-width: 1200px;
-}
-
-.service-card, .portfolio-card {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 16px;
-    padding: 20px;
-    width: 350px;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-.service-card:hover, .portfolio-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
-}
-
-.service-card img {
-  width: auto;
-    height: 180px;
-    object-fit: contain;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease;
-}
-
-.service-card:hover img {
-    transform: scale(1.05);
-}
-
-.service-card h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #ffffff;
-}
-
-.service-card p {
-    font-size: 15px;
-    line-height: 1.5;
-    color: #d1d5db;
-}
 
 .portfolio-section {
     background: linear-gradient(135deg, #334155 0%, #475569 100%);
@@ -638,19 +578,18 @@ footer p {
     }
 
     /*  Navigation menu */
-    .nav-links {
+        .nav-links {
         position: fixed;
-        top: 135px;
+        top: 0;              /* ✔️ Մենյուն սկսվում է վերևից */
         left: 0;
-        width: 100vw;
         height: 100vh;
-        background: rgba(17, 24, 39, 0.98);
         flex-direction: column;
-        justify-content: flex-start;
+        overflow-y: auto;    /* ✔️ Եթե երկար է, scroll */
+        background: rgba(17, 24, 39, 0.98);
         transform: translateX(-100%);
-        transition: transform 0.5s ease;
-        z-index: 999;
+        padding-top: 120px;  /* ✔️ Որ մենյուն չմտնի header-ի մեջ */
     }
+
 
     .nav-links li {
         padding: 15px 0;
@@ -774,88 +713,6 @@ footer p {
     }
 }
 
-#course {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    padding: 80px 20px;
-    text-align: center;
-    font-size: 8px;
-    max-width: 100%;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
-    color: #fff;
-}
-
-#course .text {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-}
-
-#course a.python {
-    display: inline-block;
-    position: relative;
-    padding: 16px 52px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-left:10px;
-    margin-top:  17px;
-    text-decoration: none;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    border-radius: 200px;
-    border: 1px solid black;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-#course a.pythonn {
-    display: inline-block;
-    padding: 16px 52px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-left:10px;
-    margin-top:  -10px;
-    text-decoration: none;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    border-radius: 200px;
-    border: 1px solid black;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-#course a.pythonnn{
-    display: inline-block;
-    padding: 16px 52px;
-    font-size: 20px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-left:10px;
-    margin-top:  -15px;
-    text-decoration: none;
-    -webkit-border-radius: 200px;
-    -moz-border-radius: 200px;
-    border-radius: 200px;
-    border: 1px solid black;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-}
-
-#course a.python:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-#course a.pythonn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-#course a.pythonnn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 .card_py {
   background: rgba(255, 255, 255, 0.568);
@@ -886,11 +743,6 @@ footer p {
   margin-bottom: 6px;
 }
 
-.subtitle {
-  color: #333;
-  font-size: 18px;
-  margin-bottom: 31px;
-}
 
 .bottom {
   display: flex;
@@ -902,17 +754,7 @@ footer p {
   padding-top: 10px;
 }
 
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #fff;
-  padding: 20px;
-}
 
-.icon-container {
-  display: inline-block;
-}
 
 .code-icon {
   width: 80px;   
@@ -920,47 +762,6 @@ footer p {
 }
 
 
-.icon-container {
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px;
-  border-radius: 50%;
-  background: #f0f0f0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.icon-container i {
-  font-size: 60px;
-  color: #3776ab; /* Python blue */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.icon-container i:hover {
-  transform: scale(1.15);
-
-}
-.python{
-    margin-top:0px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 20px;
-    color: black;
-}
-
-.das{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.python h2{
-    font-size: 1px;
-}
 
 
 
@@ -1078,3 +879,4 @@ footer p {
     font-size: 18px;
   }
 }
+

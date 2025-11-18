@@ -1,0 +1,295 @@
+/* -------------------- RESET -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    padding-top: 80px;
+}
+
+/* -------------------- TOP BAR -------------------- */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 40px;
+    background: rgba(17, 24, 39, 0.95);
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    border-bottom: 2px solid #d1d5db;
+    transition: transform 0.3s ease-in-out;
+}
+
+.top-bar.hidden {
+    transform: translateY(-100%);
+}
+
+.top-bar a, .top-bar i, .top-bar p, .top-bar img {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.icon_lng {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon_lng img {
+    width: 20px;
+    height: 20px;
+}
+
+/* -------------------- HEADER + NAVIGATION -------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: fixed;
+    width: 100%;
+    top: 40px;
+    z-index: 100;
+    background: rgba(17, 24, 39, 0.95);
+    transition: top 0.3s ease-in-out;
+}
+
+header.scrolled {
+    top: 0;
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+}
+
+.menu_burger {
+    display: none;
+    color: #fff;
+}
+
+#menu::before {
+    content: "☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-links a {
+    position: relative;
+    margin-left: 20px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #2873ab;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* -------------------- SERVICES SECTION -------------------- */
+.services-section {
+    width: 100%;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #f8fafc;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.services-container,
+.portfolio-container,
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 130px;
+    gap: 30px;
+    background: #1f2937;
+    max-width: 1200px;
+    padding: 80px 20px;
+}
+
+.service-card,
+.portfolio-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.service-card:hover,
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.3);
+}
+
+.service-card img {
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.service-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #d1d5db;
+}
+
+/*  Accordion info box */
+.info-box {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+    transition: max-height .4s ease, opacity .4s ease;
+}
+
+.service-card.active .info-box {
+    max-height: 1000px;
+    opacity: 1;
+    padding: 15px;
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+@media (max-width: 780px) {
+
+    body {
+        padding-top: 0;
+        overflow-x: hidden;
+    }
+
+    .top-bar {
+        padding: 10px 20px;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .phone_topbar {
+        margin-bottom: 10px;
+    }
+
+    .icon_lng { gap: 0; }
+
+    header {
+        padding: 10px 20px;
+        height: 70px;
+        top: 0;
+        position: relative;
+    }
+
+    /* Burger */
+    .menu_burger {
+        display: block !important;
+        cursor: pointer;
+        padding: 10px 15px;
+        background: rgba(17, 24, 39, 0.95);
+        border-radius: 5px;
+        border: 2px solid #0077C8;
+        z-index: 1000;
+    }
+
+    /* Mobile Nav */
+       .nav-links {
+        position: fixed;
+        top: 0;              /* ✔️ Մենյուն սկսվում է վերևից */
+        left: 0;
+        height: 100vh;
+        flex-direction: column;
+        overflow-y: auto;    /* ✔️ Եթե երկար է, scroll */
+        background: rgba(17, 24, 39, 0.98);
+        transform: translateX(-100%);
+        padding-top: 120px;  /* ✔️ Որ մենյուն չմտնի header-ի մեջ */
+    }
+
+
+    .nav-links.active { transform: translateX(0); }
+
+    .nav-links li { padding: 15px 0; }
+
+    .nav-links a {
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    .services-container,
+    .portfolio-container {
+         margin-left: 0;    /* ← ԱՅՍԸ ԱՎԵԼԱՑՐԵԼ */
+        margin-right: 0;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    section { padding: 60px 10px; }
+
+    .home-section h1 { font-size: 32px; text-align: center; }
+    .home-section p  { font-size: 16px; text-align: center; }
+}
+
+footer {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 15px 0;
+}
+
+footer p {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 5px;
+    font-size: 12px;
+}

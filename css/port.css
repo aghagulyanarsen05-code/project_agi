@@ -8,7 +8,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5;
+    background-color:#1e293b;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
@@ -75,6 +75,13 @@ header.scrolled {
     width: 90px;
     height: 90px;
     object-fit: contain;
+}
+.menu{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
 .menu_burger {
@@ -160,8 +167,8 @@ header.scrolled {
         border: 2px solid #0077C8;
     }
 
-    /*  Navigation menu */
-       .nav-links {
+
+    .nav-links {
         position: fixed;
         top: 0;              /* ✔️ Մենյուն սկսվում է վերևից */
         left: 0;
@@ -207,6 +214,7 @@ header.scrolled {
     }
 
     section {
+        
         padding: 60px 10px;
     }
 
@@ -249,6 +257,7 @@ header.scrolled {
     color: #333;
 }
 
+
 /* Section-ի մուտքի անիմացիա */
 .course-section {
   background-color: #ffffff;
@@ -268,86 +277,103 @@ header.scrolled {
     }
 }
 
+@media screen and (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr !important; /* մեկ սյուն */
+    gap: 20px;
+  }
 
-.course-section h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #1e3a8a;
-}
+  .card {
+    padding: 9px;
+    box-sizing: border-box;
+  }
 
-.course-section p {
-    max-width: 800px;
-    margin: 0 auto 20px;
-    font-size: 1.1rem;
-    text-align: center;
-    color: #555;
-}
+  .card h3 {
+    font-size: 1.2rem;
+  }
 
-/* 🔹 UX բարելավված cards layout՝ 3 սյուն, հավասար բարձրությամբ */
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
-    gap: 25px;
-    margin-top: 40px;
-    align-items: stretch; /* քարտերը հավասար բարձրությամբ */
-
-
-}
-
-/* 🔹 Քարտեր՝ հավասար բարձրությամբ և hover transition */
-.card {
-    background-color: #f0f4ff;
-    border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    top: 60px;
-}
-
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-     box-shadow: 0 4px 20px #1e3a8a;
-}
-
-.card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 15px;
-    color: #1e40af;
-}
-
-.card ul {
-    list-style: none;
-    padding: 0;
-    flex-grow: 1; /* ստիպում է ցանկը զբաղեցնել միջին մասը */
-}
-
-.card ul li {
-    position: relative;
-    padding-left: 25px;
-    margin-bottom: 10px;
+  .card ul li {
     font-size: 1rem;
-    color: #333;
+  }
 }
 
-.card ul li::before {
-    content: "✅";
-    position: absolute;
-    left: 0;
-    top: 0;
+
+.top-bar a, i, p, img {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    cursor: pointer;
 }
 
-/* Վերջին պարբերությունը՝ ավելի շեշտված */
-.course-section p:last-of-type {
-    margin-top: 40px;
-    font-weight: 500;
-    color: #404d72;
+.icon_lng {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* կամ flex-start */
+    gap: 12px; /* բոլորի միջև հավասար տարածություն */
+}
+
+.icon_lng img {
+    width: 20px;
+    height: 20px;
+}
+
+/* ------------ HEADER ------------ */
+
+
+
+
+
+
+/* ------------ PORTFOLIO SECTION ------------ */
+.portfolio-section {
+    padding: 80px 40px;
     text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: 38px;
+    margin-bottom: 60px;
+    color: #ffffff;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.portfolio-card {
+    background: #1e293b;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .35);
+}
+
+.portfolio-card img {
+    width: 100%;
+    border-radius: 14px;
+    margin: 20px 0;
+}
+
+.portfolio-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+    color: #f1f5f9;
+}
+
+.portfolio-card p {
+    font-size: 16px;
+    color: #d3dce6;
+    line-height: 1.6;
 }
 
 
@@ -365,127 +391,3 @@ footer p {
     letter-spacing: 5px;
     font-size: 12px;
 }
-
-@media screen and (max-width: 768px) {
-  .cards-container {
-    grid-template-columns: 1fr !important; /* մեկ սյուն */
-    gap: 20px;
-  }
-
-  .card {
-    width: 100%;
-    padding: 18px;
-  }
-
-  .card h3 {
-    font-size: 1.2rem;
-  }
-
-  .card ul li {
-    font-size: 1rem;
-  }
-}
-
-
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background: #fff; */
-  padding: 20px;
-}
-
-.icon-container {
-  display: inline-block;
-}
-
-
-
-.icon-container {
-  width: 90px;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 15px;
-  border-radius: 50%;
-  background: #f0f0f0;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.icon-container i {
-  font-size: 60px;
-  color: #3776ab; /* Python blue */
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.icon-container i:hover {
-  transform: scale(1.15);
-
-}
-.python{
-    margin-top:70px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 20px;
-    color: black;
-}
-
-.das{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.python h2{
-    font-size: 1px;
-}
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    /* background: #004a94; */
-    color: rgb(229, 229, 229);
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    text-decoration: none;
-    background-color: #1e3a8a;
-    transition: background 0.3s;
-    border: none;
-    color: white !important;
-}
-.btnn{
-    display: inline-block;
-    padding: 12px 28px;
-    /* background: #004a94; */
-    color: rgb(60, 20, 167);
-    font-weight: bold;
-    margin-top: 60px ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    text-decoration: none;
-    background-color: #1e3a8a;
-    transition: background 0.3s;
-    border: none;
-    color: white !important;
-}
-
-h1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #1e3a8a;
-}
-
