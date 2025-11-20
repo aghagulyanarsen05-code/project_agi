@@ -8,7 +8,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scroll-behavior: smooth;
@@ -21,17 +21,16 @@ body {
         display: flex;
     justify-content: space-between;
     align-items: center;
-        border-bottom: 2px solid white;
     padding: 0 40px;
     position: fixed;
     width: 100%;
+        border-bottom: 2px solid white;
     z-index: 100;
     height: 50px;
     background: rgba(17, 24, 39, 0.95);
     top:0px;
     transition: top 0.3s ease-in-out;
 }
-
 .top-bar a, i, p, img {
     text-decoration: none;
     color: #fff;
@@ -50,6 +49,7 @@ body {
     width: 20px;
     height: 20px;
 }
+
 
 header {
     display: flex;
@@ -120,9 +120,11 @@ header {
         width: 100%;
         padding-top: 0px;
     }
-
-       .top-bar {
-       padding: 10px 20px;
+    h1{
+      margin-top: 150px;
+    }
+    .top-bar {
+     padding: 10px 20px;
         flex-direction: column;
         height: 70px;
         position: relative;
@@ -140,7 +142,7 @@ header {
     }
 
     header {
-        padding: 10px 20px;
+          padding: 10px 20px;
         display: flex;
         height: 70px;
         position: relative;
@@ -293,6 +295,7 @@ header {
     gap: 25px;
     margin-top: 40px;
     align-items: stretch; /* քարտերը հավասար բարձրությամբ */
+    
 
 
 }
@@ -307,7 +310,8 @@ header {
     display: flex;
     flex-direction: column;
     height: 100%;
-    top: 60px;
+    /* ⛔ Հեռացրու սա */
+    /* top: 60px; */
 }
 
 
@@ -389,11 +393,7 @@ footer p {
 }
 
 
-.btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .icon-container {
   display: flex;
@@ -431,14 +431,13 @@ footer p {
   transform: scale(1.15);
 
 }
-.python{
-    margin-top:70px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    font-size: 20px;
+.python {
+    margin-top: 20px; /* ⬅ 70px-ի փոխարեն */
+    font-size: 22px;
     color: black;
+    text-align: center;
 }
+
 
 .das{
     display: flex;
@@ -488,6 +487,203 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #1e3a8a;
+    color: #ffffff;
 }
 
+@media (max-width: 768px) {
+  .card {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .python {
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  .icon-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-container i {
+    font-size: 45px;
+  }
+}
+
+/* 📌 COURSE SECTION — մաքրված ու օպտիմալացված */
+.course-section {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(164, 30, 30, 0.08);
+  padding: 50px 30px;
+}
+
+/* Վերնագիր */
+.course-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.course-section p {
+  max-width: 800px;
+  margin: 0 auto 20px;
+  font-size: 1.12rem;
+  text-align: center;
+  color: #444;
+}
+
+/* 📌 GRID — աշխատում է Desktop/Tablet/Mobile */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 40px;
+  align-items: stretch;
+}
+
+/* 📌 Քարտեր */
+.card {
+  background-color: #f2f2f277;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(30,58,138,0.26);
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #1e40af;
+}
+
+/* Ցանկ */
+.card ul {
+  list-style: none;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.card ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #222;
+}
+
+.card ul li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: rgb(24, 140, 24);
+}
+
+/* 📌 Icon */
+.icon-container {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.icon-container i {
+  font-size: 55px;
+  color: #3776ab;
+  transition: transform .3s ease;
+}
+
+.icon-container:hover i {
+  transform: scale(1.12);
+}
+
+/* 📌 Buttons */
+.btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  color: #fff !important;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  margin-top: 25px;
+  transition: 0.3s ease;
+}
+.btnn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  color: #fff !important;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  border: none;
+  margin-top: 75px;
+  transition: 0.3s ease;
+}
+
+
+.btn:hover, .btnn:hover {
+  background: #294EE5;
+}
+
+/* 📌 Վերնագիր Python */
+.python {
+  text-align: center;
+  margin: 25px 0 10px;
+  font-size: 24px;
+  color: #1e3a8a;
+}
+
+
+/* 📱📱 MOBILE OPTIMIZATION */
+@media screen and (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .course-section {
+    padding: 35px 15px;
+  }
+
+  .card {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .icon-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .icon-container i {
+    font-size: 42px;
+  }
+
+  .python {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+}
