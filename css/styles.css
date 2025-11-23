@@ -244,7 +244,7 @@ section {
 
 .home-section h1 {
     font-size: 48px;
-    margin-bottom: 20px;
+    margin-bottom: 310px;
 }
 
 .home-section span {
@@ -271,14 +271,26 @@ footer p {
     letter-spacing: 5px;
     font-size: 12px;
 }
+.imagess{
+    display: flex;
+    width: 600px;
+    height: 400px;
+    top: 300px;
+    position: absolute;
+    left: 800px;
 
+}
 
 @media (max-width: 780px) {
     body {
         overflow-x: hidden;
         width: 100%;
     }
-
+    .logo img {
+    width: 80px;
+    height: 90px;
+    object-fit: contain;
+}
 
     /* align-items: center;
   
@@ -312,7 +324,7 @@ footer p {
         height: 70px;
         position: relative;
         z-index: 100;
-       margin-top: 25px;
+       margin-top: 20px;
         position: fixed;
         border-bottom: 2px solid white;
     }
@@ -373,7 +385,42 @@ footer p {
 
 
 }
-
+@media (max-width: 600px) {
+  .home-section h1 {
+    font-size: 24px;
+    margin-top: 100px;
+  }
+  
+  .home-section p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+  
+  .imagess {
+    width: 90%;
+    height: auto;
+  }
+}
+@media (max-width: 600px) {
+  .home-section h1 {
+    font-size: 24px !important;
+    margin-top: 100px !important;
+  }
+  
+  .home-section p {
+    font-size: 14px !important;
+    padding: 0 10px !important;
+  }
+  
+ 
+  
+  .p {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    padding: 20px !important;
+  }
+}
 
 
 @media (max-width: 360px) {
@@ -422,3 +469,8 @@ footer p {
   to { opacity: 1; transform: translateY(0); }
 }
 
+.p{
+    position: absolute;
+    left: 400px;
+    top: 300px;
+}

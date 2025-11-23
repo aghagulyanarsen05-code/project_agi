@@ -41,7 +41,7 @@ export default {
     "welcome": "Welcome to",
     "newtech": "NewTech",
     "business_page": "business page.",
-    "welcome_text": "We are here to present innovative solutions in the world of technologies.",
+    "welcome_text": "🔹We are here to introduce innovative solutions in the world of technology. 🔹 We believe that the future belongs to companies that combine modern technologies, creative thinking, and continuous development. 🔹 Our mission is to provide solutions that not only meet today's requirements but also shape the technological tomorrow. Our vision is to become the leading technological partner in the region by supporting the digital transformation and growth of businesses. 🔹 Our core values — trust, modernity, innovation, and long-term partnership.",
     "view_projects": "View Projects",
 
     
