@@ -25,7 +25,7 @@ export default {
     "games":"Creation of game engines using AI for content generation. Development of interactive simulators and virtual worlds for education and entertainment Creation of tools and solutions for the Metaverse",
     "operator":"Computer Operator",
     "jartar":"AI Engineering",
-
+    "agi":"AGi Alians Platform",
 
 
 
