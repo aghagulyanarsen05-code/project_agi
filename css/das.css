@@ -94,7 +94,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 60px;
     font-weight: bold;
     transition: color 0.3s;
     position: relative;
@@ -629,20 +629,18 @@ h1{
 
 /* 📱📱 MOBILE OPTIMIZATION */
 @media screen and (max-width: 768px) {
-  .cards-container {
-    width: 100px;
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
 
-  .course-section {
-    padding: 35px 15px;
+  .cards-container {
+    grid-template-columns: 1fr;   /* 1 սյուն */
+    gap: 20px;
+    width: 100%;
+    padding: 0 15px;              /* եզրերից հեռու չլինի */
   }
 
   .card {
-    width: 300px;
-    margin-left: 50px;
-
+    width: 100%;                  /* 🟢 Լուծումը */
+    max-width: 100%;              /* 🟢 100%-ից չանցնի */
+    margin: 0 auto;
     padding: 20px;
     text-align: center;
   }
@@ -653,11 +651,15 @@ h1{
   }
 
   .icon-container i {
-    font-size: 42px;
+    font-size: 45px;
   }
 
   .python {
-    font-size: 20px;
     margin-top: 15px;
+    font-size: 20px;
+  }
+
+  .btn, .btnn {
+    width: 100%;
   }
 }
